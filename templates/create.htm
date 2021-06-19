@@ -1,0 +1,18 @@
+{% extends "layouts/main.htm" %}
+
+{% block body %}
+<br><br><br>
+<form method="POST" action="/save">
+  <div class="from-group">
+    <label for="value_input">Ingrese un valor: 0 o 1</label>
+    <input type="number" class="form-control" id="value_input" name="value_input">
+    
+  </div>
+  <br><br>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+{% endblock %}

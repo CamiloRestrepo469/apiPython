@@ -1,0 +1,25 @@
+{% extends "layouts/main.htm" %}
+
+ {% block body %}
+      <div class="row">
+        <div class="col-4 offset-4">
+          <div class="card">
+            <img src="https://cdn2.thecatapi.com/images/9th.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ID: {{ vote['id'] }}</h5>
+              <p class="card-text">Value: {{ vote['value'] }}</p>
+              <p class="card-text">Image: {{ vote['image_id'] }}</p>
+              <p class="card-text">User: {{ vote['sub_id'] }}</p>
+              <p class="card-text">Created_at: {{ vote['created_at'] }}</p>
+              <a href="/" class="btn btn-primary">retornar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    
+
+
+{% endblock %}
