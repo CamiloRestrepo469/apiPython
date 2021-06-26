@@ -24,12 +24,27 @@ class RequestsApi:
                 return False
             else:
                 return response.json()
-        
+
         except:
             return False
 
     @staticmethod
     def get_all_api():
+        try:
+            querystring = {"sub_id": 'my-user-123421'}
+            response = requests.request(
+                "GET", RequestsApi.url, headers=RequestsApi.headers, params=querystring)
+            if response.status_code != 200:
+                return False
+            else:
+                return response.json()
+
+        except:
+            return False
+
+
+    @staticmethod
+    def get_all_api_uno():
         try:
             querystring = {"sub_id":'my-user-123421'}
             response = requests.request(
@@ -40,7 +55,9 @@ class RequestsApi:
                 return response.json()
 
         except:
-            return False
+            return False  
+            
+                 
 
     @staticmethod
     def get_one_api(id):
